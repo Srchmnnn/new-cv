@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Програм хангамжийн оюутан</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0f172a;
+            color: #0f172a;
+        }
+        .shell {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 12px;
+        }
+        .page {
+            max-width: 980px;
+            width: 100%;
+            background: #f9fafb;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.32);
+            display: grid;
+            grid-template-columns: 0.9fr 1.6fr;
+        }
+        @media (max-width: 860px) {
+            .shell { padding: 16px 10px; }
+            .page { grid-template-columns: 1fr; }
+        }
+        .sidebar {
+            background: radial-gradient(circle at top left, #4f46e5, #1d4ed8 40%, #020617 100%);
+            color: #e5e7eb;
+            padding: 28px 26px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .avatar-wrap {
+            width: 130px;
+            height: 130px;
+            border-radius: 999px;
+            padding: 3px;
+            background: conic-gradient(from 180deg, #f97316, #a855f7, #22c55e, #38bdf8, #f97316);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 999px;
+            overflow: hidden;
+            background: #020617;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .name {
+            text-align: center;
+        }
+        .name h1 {
+            margin: 4px 0 2px;
+            font-size: 22px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .name .role {
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #c7d2fe;
+        }
+        .divider {
+            width: 56px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #c7d2fe, transparent);
+            margin: 4px auto 0;
+        }
+        .contact {
+            width: 100%;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .contact-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #9ca3ff;
+        }
+        .contact-value {
+            font-size: 13px;
+            color: #e5e7eb;
+        }
+        .sidebar-section-title {
+            margin-top: 14px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #9ca3ff;
+        }
+        .pill-list {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .pill {
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.5);
+            font-size: 11px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 6px 0 0;
+        }
+        .sidebar li {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .main {
+            padding: 26px 30px 30px;
+            background: #f9fafb;
+        }
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #6b7280;
+            margin: 4px 0 8px;
+        }
+        .section-title span {
+            border-bottom: 2px solid #4f46e5;
+            padding-bottom: 2px;
+        }
+        .para {
+            font-size: 13px;
+            line-height: 1.7;
+            margin: 0 0 8px;
+            color: #111827;
+        }
+        .item {
+            margin-bottom: 14px;
+        }
+        .item-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+        }
+        .item-meta {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+        .main ul {
+            padding-left: 18px;
+            margin: 4px 0 0;
+        }
+        .main li {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="shell">
+    <div class="page">
+        <aside class="sidebar">
+            <div class="avatar-wrap">
+                <div class="avatar">
+                    <img src="profile.jpg.png" alt="Таний зураг" />
+                </div>
+            </div>
+            <div class="name">
+                <div class="role">Програм хангамжийн оюутан</div>
+                <h1>БААТАРЫН СЭРЧМАА</h1>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact">
+                <div class="contact-item">
+                    <div class="contact-label">Байршил</div>
+                    <div class="contact-value">Улаанбаатар, Монгол Улс</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Утас</div>
+                    <div class="contact-value">+976 89991532</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">И-мэйл</div>
+                    <div class="contact-value">baatarserchmaa90@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section-title">Техникийн ур чадвар</div>
+            <div class="pill-list">
+                <span class="pill">C/C++</span>
+                <span class="pill">Java</span>
+                <span class="pill">Python</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">HTML &amp; CSS</span>
+                <span class="pill">MySQL</span>
+                <span class="pill">Git &amp; GitHub</span>
+                <span class="pill">Алгоритм ба өгөгдлийн бүтэц</span>
+            </div>
+
+            <div class="sidebar-section-title">Хувийн ур чадвар</div>
+            <ul>
+                <li>Хурдацтай суралцах, өөрийгөө хөгжүүлэх эрмэлзэлтэй</li>
+                <li>Багаар ажиллах, бусадтай ойлголцох чадвар сайн</li>
+                <li>Цагийн менежмент, хувийн зохион байгуулалттай</li>
+                <li>Тууштай, хичээнгүй</li>
+            </ul>
+
+            <div class="sidebar-section-title">Гадаад хэл</div>
+            <ul>
+                <li>Англи хэл – дунд</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="section-title"><span>Товч танилцуулга</span></div>
+            <p class="para">
+                Их Засаг Олон улсын их сургуулийн Үндэсний инженер, технологийн сургуулийн Програм хангамжийн
+                4-р курсын бакалаврын оюутан. Программчлал, алгоритм, програм хангамжийн үндсэн зарчмуудын
+                суурь мэдлэгтэй.
+            </p>
+            <p class="para">
+                Одооноос мэргэжлээрээ бодит ажлын туршлага хуримтлуулж, дадлага болон анхан шатны ажлын байрнаас
+                эхлэн сурч хөгжих зорилготой. Багаар ажиллах, шинэ технологи сурах хүсэл эрмэлзэл өндөр байна.
+            </p>
+
+            <div class="section-title"><span>Боловсрол</span></div>
+            <div class="item">
+                <div class="item-title">БАКАЛАВР Програм хангамжийн инженер</div>
+                <div class="item-meta">Их Засаг Олон улсын их сургууль – Үндэсний инженер технологийн сургууль</div>
+                <ul>
+                    <li>Судалж байсан хичээлүүд: Объект хандалтат программчлал, өгөгдлийн бүтэц ба алгоритм, өгөгдлийн сан,
+                        веб хөгжүүлэлт, програм хангамжийн инженерчлэл, компьютерийн сүлжээ, үйлдлийн систем гэх мэт.</li>
+                    <li>Төгсөх төлөвлөгөөт он: 2026.</li>
+                </ul>
+            </div>
+
+            <div class="section-title"><span>Ажлын туршлага</span></div>
+            <div class="item">
+                <div class="item-title">Одоогоор албан ёсны ажлын туршлагагүй</div>
+                <ul>
+                    <li>Програм хангамжийн чиглэлээр дадлага, анхан шатны ажлын байр хайж байгаа.</li>
+                    <li>Сургуулийн даалгавар, багийн төсөл дээр програмчлалын ур чадвараа хөгжүүлж, багт ажиллах дадалтай болсон.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
